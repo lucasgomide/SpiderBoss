@@ -1,0 +1,326 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Expires" content="-1" /> 
+<TITLE>SINTEGRA/SP - Argumentos de Consulta</TITLE>
+<script language="JavaScript">
+	function autotab(vlCampoAtual,tamanhoMaximo,proxCampo){
+		//alert("vlCampoAtual=[" + vlCampoAtual + "]\ntamanhoMaximo=[" + tamanhoMaximo + "]\nlen=[" + vlCampoAtual.length + "]");
+		if (vlCampoAtual.length == tamanhoMaximo)
+			proxCampo.focus();
+	}
+
+function Atualiza()
+{
+	//alert("document.pfe.hidFlag.value="+document.pfe.hidFlag.value);
+	if (document.pfe.hidFlag.value == 1)
+	{
+		document.pfe.hidFlag.value = 0;
+		window.location.reload();
+	}
+	document.pfe.Key.focus();
+}
+</script>
+</HEAD>
+<BODY LINK="#0000FF" VLINK="#0000FF" onLoad="Atualiza()">
+&nbsp;
+<!--
+<CENTER>
+<TABLE BORDER WIDTH="550">
+	<TR>
+		<TD WIDTH="108" BGCOLOR="#FFFFFF">
+		<CENTER><IMG SRC="imagens/sintegra.jpg" ALT="SINTEGRA" HEIGHT=81
+			WIDTH=108></CENTER>
+		</TD>
+
+		<TD WIDTH="334">
+		<CENTER><B><FONT FACE="Verdana, Arial, Helvetica"><FONT SIZE=+1>SINTEGRA/ICMS</FONT></FONT></B>&nbsp;</CENTER>
+
+		<CENTER><FONT FACE="Verdana, Arial, Helvetica">&nbsp;<B>Consulta
+		P&uacute;blica ao Cadastro ESTADO DE S&Atilde;O PAULO</B></FONT></CENTER>
+		</TD>
+
+		<TD WIDTH="108" BGCOLOR="#FFFFFF">
+		<CENTER><A HREF="http://www.fazenda.sp.gov.br" target="_top"><IMG
+			SRC="imagens/brasao4.gif" ALT="Governo do Estado de São Paulo"
+			BORDER=0 HEIGHT=72 WIDTH=66></A><A
+			HREF="http://www.fazenda.sp.gov.br" target="_top"><IMG
+			SRC="imagens/gesp.gif" ALT="Governo do Estado de São Paulo" BORDER=0
+			HEIGHT=24 WIDTH=74></A></CENTER>
+		</TD>
+	</TR>
+</TABLE>
+</CENTER>
+-->
+
+<!-- 
+<CENTER>
+	<br>
+	<TABLE BORDER WIDTH="550">
+		<TR>
+			<TD WIDTH="108" BGCOLOR="#FFFFFF">
+			<CENTER><IMG SRC="imagens/sintegra.jpg" ALT="SINTEGRA" HEIGHT=81
+				WIDTH=108></CENTER>
+			</TD>
+			<TD WIDTH="334">
+				<CENTER><B><FONT FACE="Verdana, Arial, Helvetica"><FONT SIZE=+1>SINTEGRA/ICMS</FONT></FONT></B>&nbsp;</CENTER>
+				<CENTER><FONT FACE="Verdana, Arial, Helvetica">&nbsp;<B>Consulta Pública ao Cadastro<br>ESTADO DE S&Atilde;O PAULO</B></FONT></CENTER>
+			</TD>
+			<TD WIDTH="108" BGCOLOR="#FFFFFF">
+			<CENTER><A HREF="http://www.fazenda.sp.gov.br" target="_top"><IMG
+				SRC="imagens/brasao4.gif" ALT="Governo do Estado de São Paulo"
+				BORDER=0 HEIGHT=72 WIDTH=66></A><A
+				HREF="http://www.fazenda.sp.gov.br" target="_top"><IMG
+				SRC="imagens/gesp.gif" ALT="Governo do Estado de São Paulo" BORDER=0
+				HEIGHT=24 WIDTH=74></A></CENTER>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>  
+-->
+
+<html>
+
+	<head>
+		<title>SINTEGRA/SP - Resultados de Consulta</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="description" content="Secretaria da Fazenda do Estado de São Paulo" />
+		<meta name="keywords" content="pfe, posto fiscal eletronico, secretaria, fazenda, sefaz, ICMS, IPVA, governo, São Paulo" />
+		<meta name="copyright" content="Copyright © 2007 Secretaria da Fazenda do Estado de São Paulo - Todos os direitos reservados" />
+		<link rel="stylesheet" type="text/css" href="https://www.fazenda.sp.gov.br/incs_internet/css/fazenda.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="https://www.fazenda.sp.gov.br/incs_internet/css/fazenda1.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="https://www.fazenda.sp.gov.br/incs_internet/css/barrasp2.css" media="all" />
+		<link rel="shortcut icon" href="favicon.ico" type="https://www.fazenda.sp.gov.br/images/x-icon" />
+	
+		<script type="text/javascript" src="https://www.fazenda.sp.gov.br/incs_internet/js/dropdown.js"></script>
+		<script type="text/javascript" src="https://www.fazenda.sp.gov.br/incs_internet/js/listselect.js"></script>	
+	</head>
+
+	<body leftMargin="0" topMargin="0">
+
+		<div id="barrasp_global">
+			<div id="barrasp_nav">
+				<ul>
+					<li><a href="http://www.saopaulo.sp.gov.br/">Portal do Governo</a></li>
+					<li><a href="http://www.cidadao.sp.gov.br/">Cidadão.SP</a></li>
+					<li><a href="http://www.investimentos.sp.gov.br/">Investimentos.SP</a></li>
+				</ul>
+				
+				<ul id="menu-destaques" class="selectlist">
+					<li><a href="#">Destaques</a></li>
+					<li><a href="http://www.saopaulo.sp.gov.br/sis/noticias.asp">SP	Notícias</a></li>
+					<li><a href="http://www.poupatempo.sp.gov.br/">Poupatempo</a></li>
+					<li><a href="http://www.acessasaopaulo.sp.gov.br/">Acessa São Paulo</a></li>
+					<li><a href="http://www.e-negociospublicos.com.br/">Licitações</a></li>
+					<li><a href="#">---------------------------------</a></li>
+					<li><a href="#">Secretarias:</a></li>
+					<li><a href="http://www.sap.sp.gov.br/">- Administração Penitenciária</a></li>
+					<li><a href="http://www.agricultura.sp.gov.br/">- Agricultura e Abastecimento</a></li>
+					<li><a href="http://www.desenvolvimentosocial.sp.gov.br/">- Assistência e Desenvolvimento Social</a></li>
+					<li><a href="http://www.casacivil.sp.gov.br/">- Casa Civil</a></li>
+					<li><a href="http://www.casamilitar.sp.gov.br/">- Casa Militar</a></li>
+					<li><a href="http://www.saopaulo.sp.gov.br/linha/sec_comunic.htm">-	Comunicação</a></li>
+					<li><a href="http://www.cultura.sp.gov.br/">- Cultura</a></li>
+					<li><a href="http://www.desenvolvimento.sp.gov.br/">- Desenvolvimento</a></li>
+					<li><a href="http://www.planejamento.sp.gov.br/">- Economia e Planejamento</a></li>
+					<li><a href="http://www.educacao.sp.gov.br/">- Educação</a></li>
+					<li><a href="http://www.emprego.sp.gov.br/">- Emprego e Relações do Trabalho</a></li>
+					<li><a href="http://www.saopaulo.sp.gov.br/linha/sec_ensinosup.htm">- Ensino Superior</a></li>
+					<li><a href="http://www.sejel.sp.gov.br/">- Esporte e Lazer</a></li>
+					<li><a href="http://www.fazenda.sp.gov.br/">- Fazenda</a></li>
+					<li><a href="http://www.saopaulo.sp.gov.br/linha/sec_gestao.htm">- Gestão Pública</a></li>
+					<li><a href="http://www.habitacao.sp.gov.br/">- Habitação</a></li>
+					<li><a href="http://www.justica.sp.gov.br/">- Justiça e Defesa da Cidadania</a></li>
+					<li><a href="http://www.ambiente.sp.gov.br/">- Meio Ambiente</a></li>
+					<li><a href="http://www.pge.sp.gov.br/">- Procuradoria Geral do Estado</a></li>
+					<li><a href="http://www.saopaulo.sp.gov.br/linha/sec_rel_inst.htm">- Relações Institucionais</a></li>
+					<li><a href="http://www.energia.sp.gov.br/">- Saneamento e Energia</a></li>
+					<li><a href="http://www.saude.sp.gov.br/">- Saúde</a></li>
+					<li><a href="http://www.ssp.sp.gov.br/">- Segurança Pública</a></li>
+					<li><a href="http://www.transportes.sp.gov.br/">- Transportes</a></li>
+					<li><a href="http://www.stm.sp.gov.br/">- Transportes Metropolitanos</a></li>
+				</ul>
+				<h1 id="barrasp_logo"><a href="http://www.saopaulo.sp.gov.br/" title="Governo do Estado de São Paulo">Portal do Governo do Estado de São Paulo</a></h1>
+			</div>
+		</div>
+
+		<div id="global">
+			<div id="header">
+				<h1 id="logo"><a href="http://pfe.fazenda.sp.gov.br/" title="Secretaria da Fazenda do Estado de São Paulo">Secretaria da Fazenda</a></h1>
+				<ul id="navbar">
+					<li id="nav01"><a href="http://www.fazenda.sp.gov.br/" title="Home">Home</a></li>
+					<li id="nav02"><a href="http://www.fazenda.sp.gov.br/institucional/oque.asp" title="Institucional">Institucional</a></li>
+					<li id="nav03"><a href="http://www.fazenda.sp.gov.br/servicos/"	title="Serviços">Serviços</a></li>
+					<li id="nav04"><a href="http://www.fazenda.sp.gov.br/legislacao/" title="Legislação">Legislação</a></li>
+					<li id="nav05"><a href="http://www.fazenda.sp.gov.br/contas/" title="Prestando Contas">Prestando Contas</a></li>
+					<li id="nav06"><a href="http://www.fazenda.sp.gov.br/municipios/" title="Municipios e Parcerias">Municipios e Parcerias</a></li>
+					<li id="nav07"><a href="http://www.fazenda.sp.gov.br/imprensa/" title="Notícias">Notícias</a></li>
+					<li id="nav08"><a href="http://www.fazenda.sp.gov.br/download/" title="Download">Download</a></li>
+					<li id="nav09"><a href="http://www.fazenda.sp.gov.br/email/" title="Fale Conosco">Fale Conosco</a></li>
+				</ul>
+			</div>
+		</div>
+		<br><br>
+		 		
+			
+				<TABLE BORDER WIDTH="550" align="center">
+					<TR>
+						<TD WIDTH="100" BGCOLOR="#FFFFFF">
+						<CENTER><IMG SRC="imagens/sintegra.jpg" ALT="SINTEGRA" HEIGHT=81
+							WIDTH=100></CENTER>
+						</TD>
+						<TD WIDTH="100%" align="center">
+							<table align="center">
+								<tr>
+									<td>
+										<B><FONT FACE="Verdana, Arial, Helvetica"><FONT SIZE=+1>SINTEGRA/ICMS</FONT></FONT></B>
+									</td>
+								</tr>					
+								<tr>
+									<td>
+										<FONT FACE="Verdana, Arial, Helvetica">&nbsp;<B>Consulta Pública ao Cadastro<br>ESTADO DE S&Atilde;O PAULO</B></FONT>
+									</td>
+								</tr>
+							</table>
+						</TD>				
+					</TR>
+				</TABLE>				
+				
+									
+		
+	</body>
+</html>
+&nbsp;
+<CENTER>
+<TABLE BORDER=0>
+	<TR>
+		<TD width="539"><FONT FACE="Verdana, Arial, Helvetica"><FONT
+			COLOR="#000000"> </FONT></FONT>
+		<FORM name="pfe" action="/sintegrapfe/sintegra" method=POST target=_top onsubmit="return Envia()">
+		<input type="hidden" name="hidFlag" value="0">
+		<input type="hidden" name="paramBot" value="YepIp/MvEosb1yogZYxWgg==
+">
+		<INPUT TYPE=HIDDEN NAME="servico">
+		<TABLE border="0" width="100%">
+			<TBODY><TR>
+			<TD align="LEFT" width="277"><FONT face="Verdana, Arial, Helvetica"><FONT color="#000000">Digite os caracteres ao lado:</FONT></FONT></TD><TD align="left" valign="middle" width="100"><INPUT type="text" name="Key" size="4" maxlength="4" onKeyUp = "javascript:autotab(this.value,4,document.pfe.cnpj);"></TD><TD align="LEFT" width="155">
+					<IMG border="0" src="/sintegrapfe/imageGenerator?keycheck=YepIp%2FMvEosb1yogZYxWgg%3D%3D%0A" alt="Ant-Bot"/>
+				</TD>
+
+				
+
+				
+			</TR>
+
+				<TR>
+					<TD align="LEFT" colspan="3" nowrap>
+					<FONT face="Verdana, Arial, Helvetica" size="2">
+					Se você não conseguir
+					visualizar a imagem 
+					<A href="consultaSintegraServlet">clique aqui</A>
+					</FONT>
+					</TD>
+				</TR>
+				<TR>
+					<TD align="LEFT" nowrap colspan="3">&nbsp;&nbsp;</TD>
+				</TR>
+				<TR>
+					<TD align="LEFT" nowrap colspan="3"><FONT
+						face="Verdana, Arial, Helvetica"><FONT color="#000000"><STRONG>Entre com
+					uma das op&ccedil;&otilde;es de consulta</STRONG></FONT></FONT></TD>
+				</TR>
+				<TR>
+					<TD align="LEFT" nowrap colspan="3">&nbsp;</TD>
+				</TR>
+				<TR>
+				<TD align="LEFT" width="277"><FONT face="Verdana, Arial, Helvetica"><FONT color="#000000">CNPJ :</FONT></FONT></TD><TD align="LEFT" width="100"><INPUT type="text" size="14" maxlength="14" name="cnpj" onKeyUp="somenteDigitos(this);"></TD><TD align="LEFT" width="155"><INPUT type="submit" name="botao" value="Consulta por CNPJ" onclick="Verif(1)"></TD>
+				
+				
+			</TR>
+			<TR>
+				<TD align="LEFT" width="277"><FONT face="Verdana, Arial, Helvetica"><FONT color="#000000">Inscri&ccedil;&atilde;o Estadual:</FONT></FONT></TD>
+
+				<TD align="LEFT" valign="BOTTOM" width="100"><INPUT type="text" size="12" maxlength="12" name="ie" onKeyUp="somenteDigitos(this);"">&nbsp;</TD>
+
+				<TD align="LEFT" width="155"><INPUT type="submit" name="botao" value="Consulta por IE" onclick="Verif(2)"></TD>
+			</TR>
+<!-- mecanismo anti-automato abaixo --></TBODY></TABLE>
+		</FORM>&nbsp; <BR>
+		&nbsp;
+
+		<P><FONT FACE="Verdana, Arial, Helvetica"><FONT COLOR="#000000"><A
+			HREF="http://www.sintegra.gov.br" TARGET="_top">Acessar cadastro de
+		outro Estado</A></FONT></FONT>&nbsp;
+		<P><FONT FACE="Verdana, Arial, Helvetica"><FONT COLOR="#000000"><A
+			HREF="http://www.fazenda.sp.gov.br" target="_top">P&aacute;gina da
+		Secretaria da Fazenda do Estado de S&atilde;o Paulo</A></FONT></FONT>
+		</TD>
+	</TR>
+</TABLE>
+</CENTER>
+<!----- Envia ----->
+<SCRIPT>
+var Erro=""
+var Op = ""
+function Verif(x) {
+	if (x == 1) {
+		if (document.pfe.cnpj.value == "")  { Erro = "O CNPJ deve ser informado !\n" }
+		else {
+	  		if (isNaN(document.pfe.cnpj.value)) { Erro += "O CNPJ deve ser numérico !\n" }
+			if (document.pfe.cnpj.value.length == 13) { document.pfe.cnpj.value = "0" + document.pfe.cnpj.value }
+			else if (document.pfe.cnpj.value.length != 14) { Erro += "O CNPJ deve ter exatamente 14 algarismos !\n" }
+		}
+		document.pfe.servico.value = "cnpj"
+	}
+	else if (x == 2) {
+		if (document.pfe.ie.value == "")  { Erro = "A Inscrição Estadual deve ser informada !\n" }
+		else {
+		  if (isNaN(document.pfe.ie.value)) { Erro += "A Inscrição Estadual deve ser numérica !\n" }
+		  if (document.pfe.ie.value.length != 12) { Erro += "A Inscrição Estadual deve ter exatamente 12 algarismos !\n" }
+		}
+		document.pfe.servico.value = "ie"
+	}
+	Op = x
+}
+function Envia() {
+	if (Erro != "") {
+          alert (Erro + "\nCONSULTA NÃO REALIZADA !")
+	  Erro = ""
+          return false }
+	else { 
+		document.pfe.hidFlag.value = 1
+		return true 
+	}
+}
+function somenteDigitos(campo){
+    if((ret=campo.value.search(/[^0-9]/)) > -1)
+	   campo.value = campo.value.substr(0,ret);
+}
+
+
+
+</SCRIPT>
+<br><br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="Rational Software Architect">
+</head>
+<body>
+<div id="footer">
+	Secretaria da Fazenda do Estado de São Paulo<address>Av. Rangel Pestana, 300 - São Paulo - SP - CEP.01017-911 - PABX (11)3243-3400</address>
+</div>
+</body>
+</html>
+
+</BODY>
+</HTML>
