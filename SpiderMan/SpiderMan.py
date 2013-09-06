@@ -12,19 +12,20 @@ from pyquery import PyQuery
 class SpiderMan:
     
     urls = ('http://www.uol.com.br','http://www.globo.com')
-    
+    selectors = ('div.moduloChamada > h1 > a', 'div.destaque .chamada-principal a ')
     
     def encondingUTF_8(self, str):
         try:
             return str.encode("utf-8")
         except Exception as e:
             print ("Impossível mudar a codificação do HTML", e)
+            
     def getDominio(self, url):
         try:
             url = url.split('.')
             return url[1].upper()
         except Exception as e:
-            print "Não foi possível parsear a URL " ,e
+            print ("Não foi possível parsear a URL " ,e)
             
     #request GET para todas as urls, e retorna o html para o método def
     def get(self):
@@ -44,14 +45,14 @@ class SpiderMan:
     def parse(self, html):
         try:
             pq = PyQuery(html)
-            results = pq('div.moduloChamada > h1 > a')
-            
-            for result in results:
-                news = pq(result).text()
-                print self.encondingUTF_8(news)
-            print "------------------------------------------"
+            for seletor in self.selectors:
+                results = pq(seletor)
+                for result in results:
+                    news = pq(result).text()
+                    print "--", self.encondingUTF_8(news)
+                
         except Exception as e:
-            print "Não foi possível parsear o HTML " ,e
+            print ("Não foi possível parsear o HTML " ,e)
             
     #método principal que execulta             
     def search(self):
